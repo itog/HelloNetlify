@@ -1,0 +1,30 @@
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<div id="demo"></div>
+
+<script>
+var txt = "";
+txt += "<p>screen.width: " + screen.width + "</p>";
+txt += "<p>screen.height: " + screen.height + "</p>";
+txt += "<p>screen.availWidth: " + screen.availWidth + "</p>";
+txt += "<p>screen.availHeight: " + screen.availHeight + "</p>";
+txt += "<p>window.innerWidth: " + window.innerWidth + "</p>";
+txt += "<p>window.innerHeight: " + window.innerHeight + "</p>";
+txt += "<p>window.outerWidth: " + window.outerWidth + "</p>";
+txt += "<p>window.outerHeight: " + window.outerHeight + "</p>";
+
+txt += "<p>window.devicePixelRatio: " + window.devicePixelRatio + "</p>";
+
+var vp = document.querySelector("meta[name=viewport]")
+if (vp != null) {
+        txt += "<p>viewport: " + vp.innerText + "</p>";
+}
+document.getElementById("demo").innerHTML = txt;
+</script>
+
+</body>
+</html>
+
